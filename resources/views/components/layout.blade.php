@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +7,8 @@
     <title>My Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!--
-  This example requires updating your template:
+<body class="h-full">
 
-  ```
-  <html class="h-full bg-gray-100">
-  <body class="h-full">
-  ```
--->
 <div class="min-h-full">
     <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -25,10 +18,10 @@
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
-                <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                
+                <x-nav-link href="/" type='a' :active="request()->is('/')">Home</x-nav-link>
+                <x-nav-link href="/about" type='button' :active="request()->is('about')">About</x-nav-link>
+                <x-nav-link href="/contact" type='button' :active="request()->is('contact')">Contact</x-nav-link>
               </div>
             </div>
           </div>
