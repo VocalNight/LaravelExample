@@ -9,4 +9,9 @@ class Job extends Model {
 
     use HasFactory;
     protected $table = 'job_listings';
+
+    public function employer() {
+
+        return $this->belongsTo(Employer::class);
+    }
 }
