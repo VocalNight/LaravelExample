@@ -45,14 +45,14 @@
                     <x-form-field>
                         <x-form-label for="password_confirmation">Confirm Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input name="password_confirmation" id="password_confirmation" type="password_confirmation" required></x-form-input>
+                            <x-form-input name="password_confirmation" id="password_confirmation" type="password" required></x-form-input>
                             <x-form-error name="password_confirmation" />
                         </div>
                     </x-form-field>
-                    
+
                 </div>
             <!--   <div class="mt-10">
-                    @if($errors->any()) 
+                    @if($errors->any())
                     <ul>
                         @foreach ( $errors->all() as $error)
                             <li class="text-red-500 italic">{{$error}}</li>

@@ -12,7 +12,7 @@
                     <x-form-field>
                         <x-form-label for="email">Email</x-form-label>
                         <div class="mt-2">
-                            <x-form-input name="email" id="email" type="email" required></x-form-input>
+                            <x-form-input name="email" id="email" :value="old('email')" type="email" required></x-form-input>
                             <x-form-error name="email" />
                         </div>
                     </x-form-field>
@@ -24,10 +24,10 @@
                             <x-form-error name="password" />
                         </div>
                     </x-form-field>
-                    
+
                 </div>
             <!--   <div class="mt-10">
-                    @if($errors->any()) 
+                    @if($errors->any())
                     <ul>
                         @foreach ( $errors->all() as $error)
                             <li class="text-red-500 italic">{{$error}}</li>
