@@ -26,6 +26,6 @@ class TranslateJob implements ShouldQueue
      */
     public function handle(): void
     {
-        logger("Translating " . $this->jobListing->title . ' to spanish');
+        logger("Translating " . $this->jobListing->title . '  to spanish');
     }
 }
